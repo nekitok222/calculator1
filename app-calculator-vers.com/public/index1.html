@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Калькулятор рассчета стоимости грузоперевозок</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<form>
+	<h1 align="center">Калькулятор рассчета стоимости грузоперевозок</h1>
+	<div class="calc">
+		<div class="mounth">
+		<p>Выберите месяц доставки:</p>
+		<select id="" class="list1">
+			<option value="" >Выберите месяц</option>
+			<option value="">Январь</option>
+			<option value="">Февраль</option>
+			<option value="">Август</option>
+			<option value="">Сентябрь</option>
+			<option value="">Октябрь</option>
+			<option value="">Ноябрь</option>
+		</select>
+		</div>
+		<div class="materialtype">
+		<p>Выберите тип сырья:</p>
+		<select id="" class="list2">
+			<option value="" >Тип сырья</option>
+			<option value="">Шрот</option>
+			<option value="">Жмых</option>
+			<option value="">Соя</option>
+		</select>
+		</div>
+		<div class="cargo">
+		<p>Выберите тоннаж:</p>
+		<select id="" class="list3">
+			<option value="" >Тоннаж</option>
+			<option value="">25 тонн</option>
+			<option value="">50 тонн</option>
+			<option value="">75 тонн</option>
+			<option value="">100 тонн</option>
+			</select>
+		</div>
+		
+	</div>
+	<div class="button">
+		<input type="submit" value="Рассчитать" class="btn" >
+		<div class="textarea">Здесь будет показана стоимость</div>
+	</div>
+	<h2 align ="center">Таблицы рассчета стоимости</h2>
+	<h3 align ="center" >Шрот</h3>
+	<div class="table" id = "shrot-table">
+	<div class="shrot up one bg-up">Тоннаж\Месяц</div>
+	<div class="shrot up bg-up jan">Январь</div>
+	<div class="shrot up bg-up aeb">Февраль</div>
+	<div class="shrot up bg-up aug">Август</div>
+	<div class="shrot up bg-up aep">Сентябрь</div>
+	<div class="shrot up bg-up oct">Октябрь</div>
+	<div class="shrot up bg-up nov">Ноябрь</div>
+	<div class="shrot left bg-left one-four">25</div>
+	<div class="shrot bgcolor a1">125</div>
+	<div class="shrot bgcolor a2">121</div>
+	<div class="shrot bgcolor a3">137</div>
+	<div class="shrot bgcolor a4">126</div>
+	<div class="shrot bgcolor a5">124</div>
+	<div class="shrot bgcolor a6">128</div>
+	<div class="shrot left bg-left half">50</div>
+	<div class="shrot bgcolor b1">145</div>
+	<div class="shrot bgcolor b2">118</div>
+	<div class="shrot bgcolor b3">119</div>
+	<div class="shrot bgcolor b4">121</div>
+	<div class="shrot bgcolor b5">122</div>
+	<div class="shrot bgcolor b6">147</div>
+	<div class="shrot left bg-left three-four">75</div>
+	<div class="shrot bgcolor c1">136</div>
+	<div class="shrot bgcolor c2">137</div>
+	<div class="shrot bgcolor c3">141</div>
+	<div class="shrot bgcolor c4">137</div>
+	<div class="shrot bgcolor c5">131</div>
+	<div class="shrot bgcolor c6">143</div>
+	<div class="shrot left bg-left max">100</div>
+	<div class="shrot bgcolor d1">138</div>
+	<div class="shrot bgcolor d2">142</div>
+	<div class="shrot bgcolor d3">117</div>
+	<div class="shrot bgcolor d4">124</div>
+	<div class="shrot bgcolor d5">147</div>
+	<div class="shrot bgcolor d6">112</div>
+	</div>
+	<h3 align ="center" >Жмых</h3>
+	<div class="table" id="zhmyh-table">
+	<div class="shrot up one bg-up">Тоннаж\Месяц</div>
+	<div class="shrot up bg-up jan">Январь</div>
+	<div class="shrot up bg-up feb">Февраль</div>
+	<div class="shrot up bg-up aug">Август</div>
+	<div class="shrot up bg-up sep">Сентябрь</div>
+	<div class="shrot up bg-up oct">Октябрь</div>
+	<div class="shrot up bg-up nov">Ноябрь</div>
+	<div class="shrot left bg-left one-four">25</div>
+	<div class="shrot bgcolor a1">121</div>
+	<div class="shrot bgcolor a2">137</div>
+	<div class="shrot bgcolor a3">124</div>
+	<div class="shrot bgcolor a4">137</div>
+	<div class="shrot bgcolor a5">122</div>
+	<div class="shrot bgcolor a6">125</div>
+	<div class="shrot left bg-left half">50</div>
+	<div class="shrot bgcolor b1">118</div>
+	<div class="shrot bgcolor b2">121</div>
+	<div class="shrot bgcolor b3">145</div>
+	<div class="shrot bgcolor b4">147</div>
+	<div class="shrot bgcolor b5">143</div>
+	<div class="shrot bgcolor b6">145</div>
+	<div class="shrot left bg-left three-four">75</div>
+	<div class="shrot bgcolor c1">137</div>
+	<div class="shrot bgcolor c2">124</div>
+	<div class="shrot bgcolor c3">136</div>
+	<div class="shrot bgcolor c4">143</div>
+	<div class="shrot bgcolor c5">112</div>
+	<div class="shrot bgcolor c6">136</div>
+	<div class="shrot left bg-left max">100</div>
+	<div class="shrot bgcolor d1">142</div>
+	<div class="shrot bgcolor d2">131</div>
+	<div class="shrot bgcolor d3">138</div>
+	<div class="shrot bgcolor d4">112</div>
+	<div class="shrot bgcolor d5">117</div>
+	<div class="shrot bgcolor d6">138</div>
+	</div>
+	<h3 align ="center" >Соя</h3>
+	<div class="table" id="soya-table">
+	<div class="shrot up one bg-up">Тоннаж\Месяц</div>
+	<div class="shrot up bg-up jan" >Январь</div>
+	<div class="shrot up bg-up feb" >Февраль</div>
+	<div class="shrot up bg-up aug" >Август</div>
+	<div class="shrot up bg-up sep" >Сентябрь</div>
+	<div class="shrot up bg-up oct" >Октябрь</div>
+	<div class="shrot up bg-up nov" >Ноябрь</div>
+	<div class="shrot left bg-left one-four">25</div>
+	<div class="shrot bgcolor a1">137</div>
+	<div class="shrot bgcolor a2">125</div>
+	<div class="shrot bgcolor a3">124</div>
+	<div class="shrot bgcolor a4">122</div>
+	<div class="shrot bgcolor a5">137</div>
+	<div class="shrot bgcolor a6">121</div>
+	<div class="shrot left bg-left half">50</div>
+	<div class="shrot bgcolor b1">147</div>
+	<div class="shrot bgcolor b2">145</div>
+	<div class="shrot bgcolor b3">145</div>
+	<div class="shrot bgcolor b4">143</div>
+	<div class="shrot bgcolor b5">119</div>
+	<div class="shrot bgcolor b6">118</div>
+	<div class="shrot left bg-left three-four">75</div>
+	<div class="shrot bgcolor c1">112</div>
+	<div class="shrot bgcolor c2">136</div>
+	<div class="shrot bgcolor c3">136</div>
+	<div class="shrot bgcolor c4">112</div>
+	<div class="shrot bgcolor c5">141</div>
+	<div class="shrot bgcolor c6">137</div>
+	<div class="shrot left bg-left max">100</div>
+	<div class="shrot bgcolor d1">122</div>
+	<div class="shrot bgcolor d2">138</div>
+	<div class="shrot bgcolor d3">138</div>
+	<div class="shrot bgcolor d4">117</div>
+	<div class="shrot bgcolor d5">117</div>
+	<div class="shrot bgcolor d6">142</div>
+	</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,130 @@
+.calc {
+	padding: 1em;
+	
+}
+
+body{
+	font-family: Georgia, serif;
+	font-variant: small-caps
+}
+
+h1{
+	text-shadow: 1px 1px 2px rgb(202, 92, 92), 0 0 1em rgb(243, 235, 124);
+}
+
+h2{
+	text-shadow: rgb(248, 248, 248) 1px 0 10px;
+}
+
+h3{
+	text-shadow: rgb(248, 248, 248) 1px 0 10px;
+}
+
+.calc .mounth{
+	padding: 1em;
+	text-align:center;
+	background-color: rgb(228, 202, 185);
+	border: 1px solid;
+	box-shadow: 4px 4px 4px #4f4f4f;
+}
+
+.calc  .materialtype{
+	padding: 1em;
+	text-align:center;
+	background-color: rgb(178, 235, 235);
+	border: 1px solid;
+	box-shadow: 4px 4px 4px #4f4f4f;
+}
+
+.calc  .cargo{
+	padding: 1em;
+	text-align:center;
+	background-color: rgb(208, 235, 178);
+	border: 1px solid;
+	box-shadow: 4px 4px 4px #4f4f4f;
+}
+
+.calc{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr; 
+	grid-gap: 1em;
+}
+
+.textarea{
+	width: 60%;
+	height: 100%;
+	margin-left: auto;
+   	margin-right: auto;
+	background: rgb(247, 209, 154);
+	text-align: center;
+	line-height: 60px;
+	font-size: 1.5rem;
+	cursor: pointer;
+	border: 1px solid;
+	box-shadow: 4px 4px 4px #4f4f4f;
+}
+.btn{
+	font-family: Georgia, serif;
+	font-variant: small-caps;
+	padding-bottom: 1%;
+	margin-left: 40%;
+	margin-bottom: 1%;
+	width: 20%;
+	height: 100%;
+	border-radius: 20%;
+	background: rgb(243, 247, 211);
+	text-align: center;
+	line-height: 60px;
+	font-size: 1.5rem;
+	cursor: pointer;
+	user-select: none;
+	border: 1px solid;
+	box-shadow: 4px 4px 4px #4f4f4f;
+}
+.btn:hover {
+	filter: brightness(120%);
+}
+
+.btn:active {
+	filter: brightness(70%);
+}
+
+.table{
+	display: grid;
+	grid-template-areas: 
+	"one jan feb aug sep oct nov "
+	"one-four a1 a2 a3 a4 a5 a6"
+	;
+	margin: auto;
+	width: 70%;
+	height: 40%;
+	border:1px solid rgb(0, 0, 0);
+	border-radius: 20px;
+	background: rgb(226, 226, 226);
+	color: rgb(0, 0, 0);
+	font-family: Arial, sans-serif;
+	padding: 20px;
+	box-shadow: 4px 4px 4px #4f4f4f;
+}
+.shrot{
+	border: 1px solid rgb(0, 0, 0);
+}
+.up{
+	border:1px solid rgb(0, 0, 0);
+}
+
+.bgcolor{
+	background-color: rgb(245, 255, 203);
+}
+
+.left{
+	border:1px solid rgb(0, 0, 0);
+}
+
+.bg-up{
+	background: rgb(248, 222, 137);
+}
+
+.bg-left{
+	background: rgb(190, 188, 188);
+}
