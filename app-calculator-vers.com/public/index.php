@@ -1,4 +1,24 @@
+<?php
+// через рекваер и переименовать в ресурс дата положить его в папку конфиг
+include 'data.php';
+// include 'script.php';
+$ton=$_POST['cargo'];
+$month=$_POST['month'];
 
+if ($_POST['type']=='shrot'){
+    $answer = $shrot[$ton][$month];
+}
+else if($_POST['type']=='zhmyh'){
+    $answer = $zhmyh[$ton][$month];
+
+}
+else if($_POST['type']=='soya'){
+    $answer = $soya[$ton][$month];
+
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -9,50 +29,58 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <form action="script.php" method ="POST">
-
+<form method ="POST">
+<!-- Убрать алайн -->
+<!-- убрать числовые значения в неймингах -->
+<!-- От корня структура public , а паблике css , на том же уровне где паблик - папка app, на том же уровне где app и public - config -->
 	<h1 align="center">Калькулятор рассчета стоимости грузоперевозок</h1>
 	<div class="calc">
 		<div class="mounth">
 		<p>Выберите месяц доставки:</p>
-		<select id="mounth" class="list1" name="mounth">
-			<option value="jan">Январь</option>
-			<option value="feb">Февраль</option>
-			<option value="aug">Август</option>
-			<option value="sep">Сентябрь</option>
-			<option value="oct">Октябрь</option>
-			<option value="nov">Ноябрь</option>
+		<select id="month" class="list1" name="month">
+			<?php foreach($monthList as $key => $value): ?>
+				<?php echo "<option value='$key'>$value</option>" ?>
+			<?php endforeach ?>
 		</select>
 		</div>
 		<div class="materialtype">
 		<p>Выберите тип сырья:</p>
-		<select id="type" class="list2" name="type">
-			<option value="shrot"id = "shrot" name="shrot">Шрот</option>
-			<option value="zhmyh"id = "zhmyh" name="zhmyh">Жмых</option>
-			<option value="soya"id = "soya" name="soya">Соя</option>
+		<select id="type" class="list1" name="type">
+			<?php foreach($typeList as $key=>$value): ?>
+				<?php echo "<option value='$key'>$value</option>" ?>
+			<?php endforeach ?>
 		</select>
 		</div>
 		<div class="cargo">
-		<p>Выберите тоннаж:</p>
-		<select id="cargo" class="list3" name="cargo">
-			<option value="ton25">25 тонн</option>
-			<option value="ton50">50 тонн</option>
-			<option value="ton75">75 тонн</option>
-			<option value="ton100">100 тонн</option>
-			</select>
+		<p>Выберите тоннаж товара:</p>
+		<select id="cargo" class="list1" name="cargo">
+			<?php foreach($cargoList as $key): ?>
+				<?php echo "<option value='$key'>$key</option>" ?>
+			<?php endforeach ?>
+		</select>
 		</div>
 		
 	</div>
 	<div class="button">
-        <input type="submit" value="Рассчитать" class="btn" name="submit">
-		<div class="textarea"><p>Здесь будет показана стоимость</p>
-        <div><?php echo $answer?></div>
+        <input type="submit" value="Рассчитать" class="btn">
+		<div class="textarea">Ответ:<br><?php echo $_POST['cargo'].', '.$_POST['month'].' = '.$answer; if($answer){echo ' тонн';};?></div>
     </div>
-        
-	</div>
-</form>
+	</form>
+	<?php
+	if ($_POST['type']=='shrot'){
+    include 'shrot.php';
+}
+else if($_POST['type']=='zhmyh'){
+    include 'zhmyh.php';
+
+}
+else if($_POST['type']=='soya'){
+    include 'soya.php';
+
+}
+else{};
+	?>
 </body>
 </html>
 
-
+<!-- Без лишних файлов -->

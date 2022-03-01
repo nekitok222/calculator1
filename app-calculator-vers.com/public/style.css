@@ -89,22 +89,46 @@ h3{
 	filter: brightness(70%);
 }
 
-.table{
-	display: grid;
-	grid-template-areas: 
-	"one jan feb aug sep oct nov "
-	"one-four a1 a2 a3 a4 a5 a6"
-	;
-	margin: auto;
-	width: 70%;
+th{
+	border-right: 1px solid black;
+
+}
+
+th:last-child{
+	border-right: 0;
+}
+
+tr td{
+	border-right: 1px solid black;
+
+}
+
+tr td:last-child{
+	border-right: 0;
+}
+
+tr{
+	border-bottom: 1px solid black;
+}
+
+tr:last-child{ border-bottom: 0; }
+
+
+.aim{
+	background-color: rgb(147, 241, 124);
+}
+
+table{
+	text-align: center;
+	border-collapse: collapse;
+    width: 50%;
+	margin: 0 auto;
 	height: 40%;
-	border:1px solid rgb(0, 0, 0);
 	border-radius: 20px;
-	background: rgb(226, 226, 226);
-	color: rgb(0, 0, 0);
+	background: rgb(168, 220, 255);
 	font-family: Arial, sans-serif;
 	padding: 20px;
-	box-shadow: 4px 4px 4px #4f4f4f;
+	box-shadow: 4px 4px 4px #4f4f4f; 
 }
 .shrot{
 	border: 1px solid rgb(0, 0, 0);
